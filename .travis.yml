@@ -6,7 +6,7 @@ cache:
   - node_modules
 addons:
   sonarcloud:
-    organization: services
+    organization: "services"
     token:
       secure: $sonar_token 
 jobs:
