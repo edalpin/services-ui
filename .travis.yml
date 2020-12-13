@@ -4,9 +4,16 @@ node_js:
 cache:
   directories:
   - node_modules
+addons:
+  sonarcloud:
+    organization: "services"
+    token:
+      secure: $sonar_token 
 jobs:
   include:
     - stage: Build
       script: npm run build
     - stage: Unit Test
       script: npm run test a
+    - stage: Sonar Qube
+      script: sonar-scanner
