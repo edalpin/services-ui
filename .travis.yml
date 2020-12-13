@@ -8,12 +8,12 @@ addons:
   sonarcloud:
     organization: "Services"
     token:
-      secure: ed2fc5ef528e0f21afe02f01ecc5eb83a4512d75
+      secure: $SONAR_TOKEN 
 jobs:
   include:
-    - stage: Build
-      script: npm run build
-    - stage: Unit Test
-      script: npm run test a
+    #- stage: Build
+    #  script: npm run build
+    #- stage: Unit Test
+    #  script: npm run test a
     - stage: Sonar Qube
       script: sonar-scanner
