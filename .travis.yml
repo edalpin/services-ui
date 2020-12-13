@@ -6,7 +6,7 @@ cache:
   - node_modules
 jobs:
   include:
-    - stage: build
+    - stage: Build
       script: npm run build
-    - stage: test
+    - stage: Unit Test
       script: npm run test a
