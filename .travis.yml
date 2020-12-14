@@ -6,7 +6,7 @@ cache:
   - node_modules
 addons:
   sonarcloud:
-    organization: "Services"
+    organization: "services.ui.app.static.code"
     token: $SONAR_TOKEN 
 jobs:
   include:
