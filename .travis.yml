@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+addons:
+  sonarcloud:
+    organization: "services"
+    token: $SONAR_TOKEN 
+jobs:
+  include:
+    - stage: Build
+      script: npm run build
+    - stage: Unit Test
+      script: npm run test a
+    - stage: Sonar Qube
+      script: sonar-scanner
